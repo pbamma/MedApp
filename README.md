@@ -7,3 +7,9 @@
 iOS 10.0+ 
 Xcode 8.0+
 Swift 3.0+
+
+# Installation
+- all pods are checked in, no need for any pod install
+
+# Build notes
+- after github co, simply run project from XCode IDE.
