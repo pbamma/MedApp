@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C4C0422BE4EA3058CEF45FA /* Pods_MedApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7183215F3AC4CF147A87BB47 /* Pods_MedApp.framework */; };
+		CD07EFF91F41630B005F51AE /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD07EFF81F41630B005F51AE /* ArticleTableViewCell.swift */; };
 		CD0B8AFD1F41387A0085B164 /* MDCArticleBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8AF71F41387A0085B164 /* MDCArticleBase.swift */; };
 		CD0B8AFE1F41387A0085B164 /* MDCAttribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8AF81F41387A0085B164 /* MDCAttribution.swift */; };
 		CD0B8AFF1F41387A0085B164 /* MDCData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8AF91F41387A0085B164 /* MDCData.swift */; };
@@ -15,7 +16,6 @@
 		CD0B8B011F41387A0085B164 /* MDCPagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8AFB1F41387A0085B164 /* MDCPagination.swift */; };
 		CD0B8B021F41387A0085B164 /* MDCTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8AFC1F41387A0085B164 /* MDCTopics.swift */; };
 		CD0B8B051F413A5F0085B164 /* MDCAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8B041F413A5F0085B164 /* MDCAPIManager.swift */; };
-		CD0B8B081F414D450085B164 /* ArticleListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8B071F414D450085B164 /* ArticleListTableViewCell.swift */; };
 		CD0B8B0A1F414D690085B164 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8B091F414D690085B164 /* ArticleListViewController.swift */; };
 		CD43C2611F3980720019D9E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD43C2601F3980720019D9E4 /* AppDelegate.swift */; };
 		CD43C2661F3980720019D9E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD43C2641F3980720019D9E4 /* Main.storyboard */; };
@@ -27,6 +27,7 @@
 /* Begin PBXFileReference section */
 		3C3C97FBD39D0D14D8CE1CC0 /* Pods-MedApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MedApp/Pods-MedApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7183215F3AC4CF147A87BB47 /* Pods_MedApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD07EFF81F41630B005F51AE /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		CD0B8AF71F41387A0085B164 /* MDCArticleBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCArticleBase.swift; sourceTree = "<group>"; };
 		CD0B8AF81F41387A0085B164 /* MDCAttribution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCAttribution.swift; sourceTree = "<group>"; };
 		CD0B8AF91F41387A0085B164 /* MDCData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCData.swift; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		CD0B8AFB1F41387A0085B164 /* MDCPagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCPagination.swift; sourceTree = "<group>"; };
 		CD0B8AFC1F41387A0085B164 /* MDCTopics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCTopics.swift; sourceTree = "<group>"; };
 		CD0B8B041F413A5F0085B164 /* MDCAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MDCAPIManager.swift; path = MedApp/APIManager/MDCAPIManager.swift; sourceTree = SOURCE_ROOT; };
-		CD0B8B071F414D450085B164 /* ArticleListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListTableViewCell.swift; sourceTree = "<group>"; };
 		CD0B8B091F414D690085B164 /* ArticleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
 		CD43C25D1F3980720019D9E4 /* MedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD43C2601F3980720019D9E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				CD0B8B091F414D690085B164 /* ArticleListViewController.swift */,
-				CD0B8B071F414D450085B164 /* ArticleListTableViewCell.swift */,
+				CD07EFF81F41630B005F51AE /* ArticleTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -268,10 +268,10 @@
 				CD0B8AFD1F41387A0085B164 /* MDCArticleBase.swift in Sources */,
 				CD0B8AFE1F41387A0085B164 /* MDCAttribution.swift in Sources */,
 				CD0B8B011F41387A0085B164 /* MDCPagination.swift in Sources */,
+				CD07EFF91F41630B005F51AE /* ArticleTableViewCell.swift in Sources */,
 				CD0B8AFF1F41387A0085B164 /* MDCData.swift in Sources */,
 				CD43C2611F3980720019D9E4 /* AppDelegate.swift in Sources */,
 				CD0B8B051F413A5F0085B164 /* MDCAPIManager.swift in Sources */,
-				CD0B8B081F414D450085B164 /* ArticleListTableViewCell.swift in Sources */,
 				CD0B8B0A1F414D690085B164 /* ArticleListViewController.swift in Sources */,
 				CD0B8B001F41387A0085B164 /* MDCMedia.swift in Sources */,
 				CD0B8B021F41387A0085B164 /* MDCTopics.swift in Sources */,

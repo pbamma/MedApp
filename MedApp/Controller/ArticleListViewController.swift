@@ -60,14 +60,34 @@ extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: ArticleListTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ArticleListTableViewCell
+        let cell: ArticleTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ArticleTableViewCell
         
-//        cell.make.text = nil
-//        cell.model.text = nil
-//        cell.information.text = nil
-        
-        if let articleData = self.articleBase?.data {
+        if let articleData = self.articleBase?.data?[indexPath.item] {
             
+            cell.title.text = articleData.title
+            cell.summary.text = articleData.summary
+            
+            if let dateString = formatDateString(dateString: articleData.createdAt!
+                ){
+                cell.date.text = dateString
+                }
+            cell.attribution.text = articleData.attribution?.displayName
+            if let likesCount = articleData.likesCount, likesCount > 0 {
+                cell.likeCount.text = "\(likesCount)"
+                print("itme: \(indexPath.item) \(likesCount)")
+                if likesCount == 1 {
+                    cell.likesLabel.text = "Like"
+                } else {
+                    cell.likesLabel.text = "Likes"
+                }
+                cell.likesLine.alpha = 1
+                cell.likesLabel.alpha = 1
+            } else {
+                
+                cell.likesLine.alpha = 0
+                cell.likesLabel.alpha = 0
+            }
+            cell.topics.text = articleData.topics?[0].name
             //get the image
             
 //            if let thumbURL = URL.init(string: theVehicles[indexPath.item].thumb!) {
@@ -91,6 +111,24 @@ extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource 
         
         //self.navigationController?.pushViewController(viewController, animated: true)
         
+    }
+    
+    func formatDateString(dateString: String?) -> String? {
+        if let dateString = dateString {
+            
+            let dateFormat = DateFormatter()
+            dateFormat.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX"
+            
+            
+            let date = dateFormat.date(from: dateString)
+            
+            let newFormat = DateFormatter()
+            newFormat.dateFormat = "MMM, dd yyyy"
+            
+            return newFormat.string(from: date!)
+        }
+        return nil
+
     }
 }
 
