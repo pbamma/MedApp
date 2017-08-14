@@ -8,8 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		5C4C0422BE4EA3058CEF45FA /* Pods_MedApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7183215F3AC4CF147A87BB47 /* Pods_MedApp.framework */; };
+		CD0B8AFD1F41387A0085B164 /* MDCArticleBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8AF71F41387A0085B164 /* MDCArticleBase.swift */; };
+		CD0B8AFE1F41387A0085B164 /* MDCAttribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8AF81F41387A0085B164 /* MDCAttribution.swift */; };
+		CD0B8AFF1F41387A0085B164 /* MDCData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8AF91F41387A0085B164 /* MDCData.swift */; };
+		CD0B8B001F41387A0085B164 /* MDCMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8AFA1F41387A0085B164 /* MDCMedia.swift */; };
+		CD0B8B011F41387A0085B164 /* MDCPagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8AFB1F41387A0085B164 /* MDCPagination.swift */; };
+		CD0B8B021F41387A0085B164 /* MDCTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8AFC1F41387A0085B164 /* MDCTopics.swift */; };
+		CD0B8B051F413A5F0085B164 /* MDCAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8B041F413A5F0085B164 /* MDCAPIManager.swift */; };
+		CD0B8B081F414D450085B164 /* ArticleListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8B071F414D450085B164 /* ArticleListTableViewCell.swift */; };
+		CD0B8B0A1F414D690085B164 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8B091F414D690085B164 /* ArticleListViewController.swift */; };
 		CD43C2611F3980720019D9E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD43C2601F3980720019D9E4 /* AppDelegate.swift */; };
-		CD43C2631F3980720019D9E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD43C2621F3980720019D9E4 /* ViewController.swift */; };
 		CD43C2661F3980720019D9E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD43C2641F3980720019D9E4 /* Main.storyboard */; };
 		CD43C2681F3980720019D9E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD43C2671F3980720019D9E4 /* Assets.xcassets */; };
 		CD43C26B1F3980720019D9E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD43C2691F3980720019D9E4 /* LaunchScreen.storyboard */; };
@@ -19,9 +27,17 @@
 /* Begin PBXFileReference section */
 		3C3C97FBD39D0D14D8CE1CC0 /* Pods-MedApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MedApp/Pods-MedApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7183215F3AC4CF147A87BB47 /* Pods_MedApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0B8AF71F41387A0085B164 /* MDCArticleBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCArticleBase.swift; sourceTree = "<group>"; };
+		CD0B8AF81F41387A0085B164 /* MDCAttribution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCAttribution.swift; sourceTree = "<group>"; };
+		CD0B8AF91F41387A0085B164 /* MDCData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCData.swift; sourceTree = "<group>"; };
+		CD0B8AFA1F41387A0085B164 /* MDCMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCMedia.swift; sourceTree = "<group>"; };
+		CD0B8AFB1F41387A0085B164 /* MDCPagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCPagination.swift; sourceTree = "<group>"; };
+		CD0B8AFC1F41387A0085B164 /* MDCTopics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCTopics.swift; sourceTree = "<group>"; };
+		CD0B8B041F413A5F0085B164 /* MDCAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MDCAPIManager.swift; path = MedApp/APIManager/MDCAPIManager.swift; sourceTree = SOURCE_ROOT; };
+		CD0B8B071F414D450085B164 /* ArticleListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListTableViewCell.swift; sourceTree = "<group>"; };
+		CD0B8B091F414D690085B164 /* ArticleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
 		CD43C25D1F3980720019D9E4 /* MedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD43C2601F3980720019D9E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD43C2621F3980720019D9E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CD43C2651F3980720019D9E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD43C2671F3980720019D9E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD43C26A1F3980720019D9E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +68,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CD0B8B031F413A350085B164 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				CD0B8B041F413A5F0085B164 /* MDCAPIManager.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		CD0B8B061F414D0F0085B164 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CD0B8B091F414D690085B164 /* ArticleListViewController.swift */,
+				CD0B8B071F414D450085B164 /* ArticleListTableViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		CD43C2541F3980720019D9E4 = {
 			isa = PBXGroup;
 			children = (
@@ -75,14 +108,29 @@
 			isa = PBXGroup;
 			children = (
 				CD43C2601F3980720019D9E4 /* AppDelegate.swift */,
-				CD43C2621F3980720019D9E4 /* ViewController.swift */,
 				CD43C2721F3982B60019D9E4 /* Constants.swift */,
+				CD0B8B061F414D0F0085B164 /* Controller */,
+				CD0B8B031F413A350085B164 /* APIManager */,
+				CD43C2751F3995250019D9E4 /* Model */,
 				CD43C2641F3980720019D9E4 /* Main.storyboard */,
 				CD43C2671F3980720019D9E4 /* Assets.xcassets */,
 				CD43C2691F3980720019D9E4 /* LaunchScreen.storyboard */,
 				CD43C26C1F3980720019D9E4 /* Info.plist */,
 			);
 			path = MedApp;
+			sourceTree = "<group>";
+		};
+		CD43C2751F3995250019D9E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD0B8AF71F41387A0085B164 /* MDCArticleBase.swift */,
+				CD0B8AF81F41387A0085B164 /* MDCAttribution.swift */,
+				CD0B8AF91F41387A0085B164 /* MDCData.swift */,
+				CD0B8AFA1F41387A0085B164 /* MDCMedia.swift */,
+				CD0B8AFB1F41387A0085B164 /* MDCPagination.swift */,
+				CD0B8AFC1F41387A0085B164 /* MDCTopics.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E232A61D5D1F9FFA71CEEF59 /* Frameworks */ = {
@@ -217,8 +265,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD43C2731F3982B60019D9E4 /* Constants.swift in Sources */,
-				CD43C2631F3980720019D9E4 /* ViewController.swift in Sources */,
+				CD0B8AFD1F41387A0085B164 /* MDCArticleBase.swift in Sources */,
+				CD0B8AFE1F41387A0085B164 /* MDCAttribution.swift in Sources */,
+				CD0B8B011F41387A0085B164 /* MDCPagination.swift in Sources */,
+				CD0B8AFF1F41387A0085B164 /* MDCData.swift in Sources */,
 				CD43C2611F3980720019D9E4 /* AppDelegate.swift in Sources */,
+				CD0B8B051F413A5F0085B164 /* MDCAPIManager.swift in Sources */,
+				CD0B8B081F414D450085B164 /* ArticleListTableViewCell.swift in Sources */,
+				CD0B8B0A1F414D690085B164 /* ArticleListViewController.swift in Sources */,
+				CD0B8B001F41387A0085B164 /* MDCMedia.swift in Sources */,
+				CD0B8B021F41387A0085B164 /* MDCTopics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
