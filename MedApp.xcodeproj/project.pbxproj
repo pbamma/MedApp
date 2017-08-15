@@ -418,6 +418,8 @@
 			baseConfigurationReference = 3C3C97FBD39D0D14D8CE1CC0 /* Pods-MedApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_ACTIVITY_MODE = "";
+				"DEBUG_ACTIVITY_MODE[sdk=iphonesimulator*]" = disable;
 				INFOPLIST_FILE = MedApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.philipstarner.medapp.MedApp;
@@ -431,6 +433,7 @@
 			baseConfigurationReference = E4DC0644A99B5F1021FE2520 /* Pods-MedApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_ACTIVITY_MODE = "";
 				INFOPLIST_FILE = MedApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.philipstarner.medapp.MedApp;

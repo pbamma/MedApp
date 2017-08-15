@@ -16,6 +16,8 @@ class ArticleListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var logoImageView: UIImageView!
     var selectedArticleURLString:String?
+    var selectedTitle = "Article"
+    var selectedTitleString = "Article"
     
     
     override func viewDidLoad() {
@@ -47,6 +49,8 @@ class ArticleListViewController: UIViewController {
         if segue.identifier == "sequeShowArticle" {
             let viewController = segue.destination as! ArticleViewController
             viewController.urlString = self.selectedArticleURLString
+            viewController.title = self.selectedTitle
+            viewController.titleString = self.selectedTitleString
         }
     }
 
@@ -127,15 +131,21 @@ extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //get the id of the article selected
-//        if let articleDataId = self.articleBase?.data?[indexPath.item].id  {
-//            self.selectedArticleURLString = Constants.HOST + "articles/\(articleDataId).json"
-//            self.performSegue(withIdentifier: "sequeShowArticle", sender: self)
-//        }
         
         if let articleURLString = self.articleBase?.data?[indexPath.item].url  {
             //I DO NOT LIKE this... I'd rather get a better body and style it with MDC styling.  
             self.selectedArticleURLString = articleURLString
+            if let title = self.articleBase?.data?[indexPath.item].attribution?.displayName {
+                self.selectedTitle = title
+            } else {
+                self.selectedTitle = "Article"
+            }
+            
+            if let titleString = self.articleBase?.data?[indexPath.item].title {
+                self.selectedTitleString = titleString
+            } else {
+                self.selectedTitleString = "Article"
+            }
             self.performSegue(withIdentifier: "sequeShowArticle", sender: self)
         }
     }

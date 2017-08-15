@@ -13,18 +13,35 @@ import UIKit
 class ArticleViewController: UIViewController {
     
     var urlString:String!
+    var titleString:String!
     @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.titleLabel.text = titleString
         let request = URLRequest(url: URL(string: urlString)!)
         self.webView.loadRequest(request)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+}
+
+extension ArticleViewController: UIWebViewDelegate {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        if webView.isLoading {return}
+        print("we finished loading")
+        
+        UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseInOut, animations: { 
+            self.webView.alpha = 1.0
+        })
     }
     
 }
