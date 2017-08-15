@@ -207,7 +207,7 @@
         <!--Article View Controller-->
         <scene sceneID="7Xx-Ru-zWw">
             <objects>
-                <viewController id="zNF-mK-5jv" customClass="ArticleViewController" customModule="MedApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="zNF-mK-5jv" customClass="ArticleViewController" customModule="MedApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="op5-nM-yIb"/>
                         <viewControllerLayoutGuide type="bottom" id="h3q-8n-qNB"/>
@@ -215,13 +215,28 @@
                     <view key="view" contentMode="scaleToFill" id="Yd0-zL-H66">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjZ-RB-ibF">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.63137254899999995" green="0.019607843140000001" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bjZ-RB-ibF" secondAttribute="trailing" id="2KX-rr-M6B"/>
+                            <constraint firstItem="bjZ-RB-ibF" firstAttribute="leading" secondItem="Yd0-zL-H66" secondAttribute="leading" id="7ke-Ey-g1p"/>
+                            <constraint firstItem="h3q-8n-qNB" firstAttribute="top" secondItem="bjZ-RB-ibF" secondAttribute="bottom" id="9rZ-Zh-PRi"/>
+                            <constraint firstItem="bjZ-RB-ibF" firstAttribute="top" secondItem="op5-nM-yIb" secondAttribute="bottom" id="Qly-dI-LWV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="bjZ-RB-ibF" id="hq6-Zx-wFg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JSz-jr-7Z3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1375" y="19"/>
+            <point key="canvasLocation" x="1373.5999999999999" y="18.440779610194905"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZwU-qc-Kq0">

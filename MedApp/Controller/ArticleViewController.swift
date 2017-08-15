@@ -5,17 +5,21 @@
 //  Created by Philip Starner on 8/14/17.
 //  Copyright © 2017 MedApp. All rights reserved.
 //
+// I DO NOT LIKE this... I'd rather get a better body and style it with MDC styling.  
+// this "present in a webview" is essentially a hybrid app... which is ugly IMO... but alas.  time.
 
 import UIKit
 
 class ArticleViewController: UIViewController {
     
     var urlString:String!
-
+    @IBOutlet weak var webView: UIWebView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // use urlString set in segue to make API call
+        let request = URLRequest(url: URL(string: urlString)!)
+        self.webView.loadRequest(request)
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,15 +27,4 @@ class ArticleViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

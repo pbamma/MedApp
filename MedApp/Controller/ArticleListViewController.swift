@@ -128,8 +128,14 @@ extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //get the id of the article selected
-        if let articleDataId = self.articleBase?.data?[indexPath.item].id  {
-            self.selectedArticleURLString = Constants.HOST + "articles/\(articleDataId).json"
+//        if let articleDataId = self.articleBase?.data?[indexPath.item].id  {
+//            self.selectedArticleURLString = Constants.HOST + "articles/\(articleDataId).json"
+//            self.performSegue(withIdentifier: "sequeShowArticle", sender: self)
+//        }
+        
+        if let articleURLString = self.articleBase?.data?[indexPath.item].url  {
+            //I DO NOT LIKE this... I'd rather get a better body and style it with MDC styling.  
+            self.selectedArticleURLString = articleURLString
             self.performSegue(withIdentifier: "sequeShowArticle", sender: self)
         }
     }
