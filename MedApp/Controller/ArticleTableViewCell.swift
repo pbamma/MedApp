@@ -46,6 +46,7 @@ class ArticleTableViewCell: UITableViewCell {
         
         likesLine.alpha = 0
         likesLabel.alpha = 0
+        likeCount.alpha = 0
     }
 
 }

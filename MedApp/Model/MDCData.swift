@@ -23,6 +23,7 @@ public class MDCData {
     static let likesCount = "likesCount"
     static let attribution = "attribution"
     static let url = "url"
+    static let body = "body"
   }
 
   // MARK: Properties
@@ -37,6 +38,7 @@ public class MDCData {
   public var likesCount: Int?
   public var attribution: MDCAttribution?
   public var url: String?
+  public var body: String?
 
   // MARK: SwiftyJSON Initializers
   /// Initiates the instance based on the object.
@@ -62,6 +64,7 @@ public class MDCData {
     likesCount = json[SerializationKeys.likesCount].int
     attribution = MDCAttribution(json: json[SerializationKeys.attribution])
     url = json[SerializationKeys.url].string
+    body = json[SerializationKeys.body].string
   }
 
   /// Generates description of the object in the form of a NSDictionary.
@@ -80,6 +83,7 @@ public class MDCData {
     if let value = likesCount { dictionary[SerializationKeys.likesCount] = value }
     if let value = attribution { dictionary[SerializationKeys.attribution] = value.dictionaryRepresentation() }
     if let value = url { dictionary[SerializationKeys.url] = value }
+    if let value = body { dictionary[SerializationKeys.body] = value }
     return dictionary
   }
 

@@ -45,8 +45,8 @@ class ArticleListViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "sequeShowArticle" {
-//            let viewController = segue.destination as! ArticleViewController
-//            viewController.urlString = self.selectedArticleURLString
+            let viewController = segue.destination as! ArticleViewController
+            viewController.urlString = self.selectedArticleURLString
         }
     }
 
@@ -90,10 +90,12 @@ extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource 
                 }
                 cell.likesLine.alpha = 1
                 cell.likesLabel.alpha = 1
+                cell.likeCount.alpha = 1
             } else {
                 
                 cell.likesLine.alpha = 0
                 cell.likesLabel.alpha = 0
+                cell.likeCount.alpha = 0
             }
             cell.topics.text = articleData.topics?[0].name
             //get the image
@@ -128,7 +130,7 @@ extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource 
         //get the id of the article selected
         if let articleDataId = self.articleBase?.data?[indexPath.item].id  {
             self.selectedArticleURLString = Constants.HOST + "articles/\(articleDataId).json"
-            //self.performSegue(withIdentifier: "sequeShowArticle", sender: self)
+            self.performSegue(withIdentifier: "sequeShowArticle", sender: self)
         }
     }
     
