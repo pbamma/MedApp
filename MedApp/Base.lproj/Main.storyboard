@@ -87,33 +87,33 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Topics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aqa-on-sqg" userLabel="Topics">
-                                                    <rect key="frame" x="16" y="300" width="41" height="19"/>
+                                                    <rect key="frame" x="16" y="300.5" width="41" height="19"/>
                                                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lR9-0r-6tu">
-                                                    <rect key="frame" x="301" y="300" width="1" height="22"/>
+                                                    <rect key="frame" x="300.5" y="300" width="1" height="22"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="1" id="elC-ac-yz6"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mex-ap-Rdq">
-                                                    <rect key="frame" x="310" y="300.5" width="8" height="19"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mex-ap-Rdq">
+                                                    <rect key="frame" x="309.5" y="304.5" width="8.5" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="TYm-ZV-MtJ"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkQ-GA-DtI">
-                                                    <rect key="frame" x="326" y="300" width="33" height="19"/>
+                                                    <rect key="frame" x="326" y="304" width="33" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="33" id="scY-wK-iEg"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -130,7 +130,7 @@
                                                 <constraint firstItem="lR9-0r-6tu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Aqa-on-sqg" secondAttribute="trailing" constant="8" id="0pa-Lr-yDg"/>
                                                 <constraint firstItem="s2m-1e-FQ4" firstAttribute="top" secondItem="aVB-GV-K3e" secondAttribute="bottom" constant="8" id="32S-TK-Oob"/>
                                                 <constraint firstItem="rUN-bZ-0gG" firstAttribute="leading" secondItem="mqq-av-l63" secondAttribute="leadingMargin" constant="8" id="6Tb-RR-gxH"/>
-                                                <constraint firstItem="Aqa-on-sqg" firstAttribute="centerY" secondItem="rkQ-GA-DtI" secondAttribute="centerY" id="85f-iE-m1X"/>
+                                                <constraint firstItem="Aqa-on-sqg" firstAttribute="baseline" secondItem="rkQ-GA-DtI" secondAttribute="baseline" id="85f-iE-m1X"/>
                                                 <constraint firstItem="8FE-E3-1B0" firstAttribute="leading" secondItem="mqq-av-l63" secondAttribute="leading" id="9rm-K3-2SV"/>
                                                 <constraint firstItem="8FE-E3-1B0" firstAttribute="top" secondItem="lR9-0r-6tu" secondAttribute="bottom" constant="4" id="ANd-Jw-Lsn"/>
                                                 <constraint firstAttribute="trailing" secondItem="8FE-E3-1B0" secondAttribute="trailing" id="DLq-XS-BXX"/>
@@ -141,7 +141,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="mWy-AQ-Use" secondAttribute="trailing" constant="8" id="Lnk-bz-zUq"/>
                                                 <constraint firstItem="aVB-GV-K3e" firstAttribute="top" secondItem="efQ-RB-4Pq" secondAttribute="bottom" constant="8" id="P1e-5J-iUy"/>
                                                 <constraint firstItem="mWy-AQ-Use" firstAttribute="leading" secondItem="mqq-av-l63" secondAttribute="leadingMargin" constant="8" id="RQ8-Nm-cch"/>
-                                                <constraint firstItem="rkQ-GA-DtI" firstAttribute="top" secondItem="mWy-AQ-Use" secondAttribute="bottom" constant="6" id="Sgf-HC-15g"/>
+                                                <constraint firstItem="rkQ-GA-DtI" firstAttribute="top" secondItem="mWy-AQ-Use" secondAttribute="bottom" constant="10" id="Sgf-HC-15g"/>
                                                 <constraint firstItem="Aqa-on-sqg" firstAttribute="leading" secondItem="mqq-av-l63" secondAttribute="leadingMargin" constant="8" id="UW3-DO-SOP"/>
                                                 <constraint firstItem="Mex-ap-Rdq" firstAttribute="top" secondItem="rkQ-GA-DtI" secondAttribute="top" id="Ueo-gJ-vju"/>
                                                 <constraint firstItem="efQ-RB-4Pq" firstAttribute="top" secondItem="mqq-av-l63" secondAttribute="topMargin" constant="8" id="cLt-Zi-aqL"/>
