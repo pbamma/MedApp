@@ -12,4 +12,4 @@ Swift 3.0+
 - all pods are checked in, no need for any pod install
 
 # Build notes
-- after github co, simply run project from XCode IDE.
+- after github co, simply run project from XCode IDE in Simulator.

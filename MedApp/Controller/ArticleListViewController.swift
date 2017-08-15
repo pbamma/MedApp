@@ -15,6 +15,7 @@ class ArticleListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var logoImageView: UIImageView!
+    var selectedArticleURLString:String?
     
     
     override func viewDidLoad() {
@@ -24,7 +25,6 @@ class ArticleListViewController: UIViewController {
         MDCAPIManager.sharedInstance.getArticleDataList { (articleBase: MDCArticleBase?, error: NSError?) in
             //
             self.articleBase = articleBase
-            print("articleBase count: \(articleBase?.data?.count)")
             
             UIView.animate(withDuration: 1.0, animations: { 
                 self.logoImageView.alpha = 0
@@ -39,9 +39,18 @@ class ArticleListViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "sequeShowArticle" {
+//            let viewController = segue.destination as! ArticleViewController
+//            viewController.urlString = self.selectedArticleURLString
+        }
+    }
 
     func displayDownloadedArticles() {
-        print("were here")
         self.tableView.reloadData()
     }
 
@@ -74,7 +83,6 @@ extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource 
             cell.attribution.text = articleData.attribution?.displayName
             if let likesCount = articleData.likesCount, likesCount > 0 {
                 cell.likeCount.text = "\(likesCount)"
-                print("itme: \(indexPath.item) \(likesCount)")
                 if likesCount == 1 {
                     cell.likesLabel.text = "Like"
                 } else {
@@ -90,17 +98,26 @@ extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource 
             cell.topics.text = articleData.topics?[0].name
             //get the image
             
-//            if let thumbURL = URL.init(string: theVehicles[indexPath.item].thumb!) {
-//                let thumbRequest = URLRequest.init(url: thumbURL, cachePolicy: URLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 10)
-//                
-//                cell.imageThumb.setImageWith(thumbRequest as URLRequest, placeholderImage: UIImage.init(named: ""), success: { (request: URLRequest, response: HTTPURLResponse?, image: UIImage) in
-//                    
-//                    cell.imageThumb.image = image
-//                    cell.setNeedsLayout()
-//                }) { (request: URLRequest, response: HTTPURLResponse?, error: Error) in
-//                    //do nothing
-//                }
-//            }
+            if let media = articleData.media, let type = media.first?.type, type.lowercased() == "photo", let urlString = media.first?.url {
+                //would love to get video... someday
+                if let thumbURL = URL.init(string: urlString) {
+                    let thumbRequest = URLRequest.init(url: thumbURL, cachePolicy: URLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 10)
+                    
+                    cell.imageThumb.setImageWith(thumbRequest as URLRequest, placeholderImage: UIImage.init(named: ""), success: { (request: URLRequest, response: HTTPURLResponse?, image: UIImage) in
+                        
+                        cell.imageThumb.image = image
+                        cell.setNeedsLayout()
+                    })
+                }
+            } else {
+                //show a default image if no image exists
+                //this default is close to our color scheme... so it looks nice-ish
+                //it would be nice to have a default set that used a keyword lookup.
+                cell.imageThumb.image = UIImage(named: "default-image")
+                cell.setNeedsLayout()
+            }
+            
+
             
         }
         
@@ -108,9 +125,11 @@ extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        //self.navigationController?.pushViewController(viewController, animated: true)
-        
+        //get the id of the article selected
+        if let articleDataId = self.articleBase?.data?[indexPath.item].id  {
+            self.selectedArticleURLString = Constants.HOST + "articles/\(articleDataId).json"
+            //self.performSegue(withIdentifier: "sequeShowArticle", sender: self)
+        }
     }
     
     func formatDateString(dateString: String?) -> String? {
@@ -118,7 +137,6 @@ extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource 
             
             let dateFormat = DateFormatter()
             dateFormat.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX"
-            
             
             let date = dateFormat.date(from: dateString)
             
