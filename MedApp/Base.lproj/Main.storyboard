@@ -28,7 +28,7 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="0rS-gB-Kpn">
                                 <rect key="frame" x="124" y="270" width="127" height="127"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="330" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eg6-kZ-NkY">
+                            <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="330" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eg6-kZ-NkY">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -217,13 +217,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhm-F6-sCr">
-                                <rect key="frame" x="160.5" y="270" width="53.5" height="20"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <rect key="frame" x="16" y="98" width="68" height="20"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSS-wo-MKl">
-                                <rect key="frame" x="32" y="322" width="311" height="23.5"/>
+                            <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3n-z2-Cnm">
+                                <rect key="frame" x="16" y="126" width="343" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="mX1-02-h1w"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSS-wo-MKl">
+                                <rect key="frame" x="16" y="135" width="343" height="23.5"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -242,13 +249,15 @@
                             <constraint firstAttribute="trailing" secondItem="bjZ-RB-ibF" secondAttribute="trailing" id="2KX-rr-M6B"/>
                             <constraint firstItem="bjZ-RB-ibF" firstAttribute="leading" secondItem="Yd0-zL-H66" secondAttribute="leading" id="7ke-Ey-g1p"/>
                             <constraint firstItem="h3q-8n-qNB" firstAttribute="top" secondItem="bjZ-RB-ibF" secondAttribute="bottom" id="9rZ-Zh-PRi"/>
-                            <constraint firstItem="SSS-wo-MKl" firstAttribute="centerY" secondItem="Yd0-zL-H66" secondAttribute="centerY" id="HCN-0g-N0T"/>
-                            <constraint firstItem="SSS-wo-MKl" firstAttribute="leading" secondItem="Yd0-zL-H66" secondAttribute="leadingMargin" constant="16" id="ISM-jh-51Q"/>
+                            <constraint firstItem="SSS-wo-MKl" firstAttribute="leading" secondItem="Yd0-zL-H66" secondAttribute="leadingMargin" id="FGc-c0-t7L"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SSS-wo-MKl" secondAttribute="trailing" id="Fva-RH-jod"/>
+                            <constraint firstItem="Zhm-F6-sCr" firstAttribute="leading" secondItem="Yd0-zL-H66" secondAttribute="leadingMargin" id="Hrx-Qg-F6j"/>
+                            <constraint firstItem="Zhm-F6-sCr" firstAttribute="top" secondItem="op5-nM-yIb" secondAttribute="bottom" constant="54" id="NvU-mf-1oX"/>
                             <constraint firstItem="bjZ-RB-ibF" firstAttribute="top" secondItem="op5-nM-yIb" secondAttribute="bottom" id="Qly-dI-LWV"/>
-                            <constraint firstItem="Zhm-F6-sCr" firstAttribute="centerX" secondItem="Yd0-zL-H66" secondAttribute="centerX" id="heK-ce-vZ9"/>
-                            <constraint firstItem="SSS-wo-MKl" firstAttribute="centerX" secondItem="Yd0-zL-H66" secondAttribute="centerX" id="jus-hj-K8l"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SSS-wo-MKl" secondAttribute="trailing" constant="16" id="wbi-56-Lg4"/>
-                            <constraint firstItem="SSS-wo-MKl" firstAttribute="top" secondItem="Zhm-F6-sCr" secondAttribute="bottom" constant="32" id="xIU-kg-9Wx"/>
+                            <constraint firstItem="G3n-z2-Cnm" firstAttribute="trailing" secondItem="Yd0-zL-H66" secondAttribute="trailingMargin" id="Sk7-Uw-GHW"/>
+                            <constraint firstItem="G3n-z2-Cnm" firstAttribute="leading" secondItem="Yd0-zL-H66" secondAttribute="leadingMargin" id="TWz-F4-ttI"/>
+                            <constraint firstItem="SSS-wo-MKl" firstAttribute="top" secondItem="G3n-z2-Cnm" secondAttribute="bottom" constant="8" id="uWR-5Q-Sbo"/>
+                            <constraint firstItem="G3n-z2-Cnm" firstAttribute="top" secondItem="Zhm-F6-sCr" secondAttribute="bottom" constant="8" id="v2i-im-x0g"/>
                         </constraints>
                     </view>
                     <connections>

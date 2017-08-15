@@ -37,7 +37,6 @@ class ArticleViewController: UIViewController {
 extension ArticleViewController: UIWebViewDelegate {
     func webViewDidFinishLoad(_ webView: UIWebView) {
         if webView.isLoading {return}
-        print("we finished loading")
         
         UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseInOut, animations: { 
             self.webView.alpha = 1.0

@@ -56,6 +56,9 @@ class ArticleListViewController: UIViewController {
 
     func displayDownloadedArticles() {
         self.tableView.reloadData()
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseInOut, animations: { 
+            self.tableView.alpha = 1
+        })
     }
 
 }
